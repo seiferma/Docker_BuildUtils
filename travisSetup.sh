@@ -5,7 +5,7 @@ if [ -z ${DOCKER_REGISTRY_MAIL+x} ]; then DOCKER_REGISTRY_MAIL=seiferma@users.no
 
 echo "{
         \"https://seiferma-docker-registry.bintray.io\" : {
-        \"auth\" : \"$BINTRAY_AUTH\",
+        \"auth\" : \"$DOCKER_REGISTRY_AUTH\",
         \"email\" : \"seiferma@users.noreply.github.com\"
      }
 }
