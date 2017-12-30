@@ -1,4 +1,6 @@
 #!/bin/sh
 
 set -o xtrace
-docker push $DOCKER_REGISTRY_NAME/$IMAGE_NAME
+if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then
+	docker push $DOCKER_REGISTRY_NAME/$IMAGE_NAME
+fi
